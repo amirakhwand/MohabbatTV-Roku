@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="MainScene" extends="Scene">
+  <script type="text/brightscript" uri="pkg:/components/MainScene.brs" />
+  <children>
+    <Rectangle width="1920" height="1080" color="0x0F0F0FFF" />
+
+    <Poster uri="pkg:/images/banner.jpg" width="1920" height="150" loadDisplayMode="scaleToZoom" />
+    <Poster uri="pkg:/images/avatar.png" width="120" height="120" translation="[75,90]" />
+    <Label text="MohabbatTV" font="font:LargeBoldSystemFont" color="0xFFFFFFFF" translation="[215,160]" />
+    <Label text="@mohabbattv" font="font:SmallSystemFont" color="0xAAAAAAFF" translation="[215,208]" />
+
+    <Group translation="[75,245]">
+      <Rectangle id="tabUnderline" width="280" height="4" color="0xFFFFFFFF" translation="[0,62]" />
+      <Poster id="tab0" uri="pkg:/images/ui/tab_videos.png" width="280" height="60" translation="[0,0]" />
+      <Poster id="tab1" uri="pkg:/images/ui/tab_live.png" width="280" height="60" translation="[300,0]" />
+      <Poster id="tab2" uri="pkg:/images/ui/tab_shorts.png" width="280" height="60" translation="[600,0]" />
+      <Poster id="tab3" uri="pkg:/images/ui/tab_playlists.png" width="280" height="60" translation="[900,0]" />
+    </Group>
+
+    <MarkupGrid id="grid" itemComponentName="VideoCard" translation="[75,335]" />
+
+    <Poster id="error" uri="pkg:/images/ui/error_youtube.png" width="1500" height="70" translation="[210,960]" visible="false" />
+    <Timer id="errorTimer" duration="6" />
+    <!-- Checks for changes while the app stays open. Starting the app always loads fresh data. -->
+    <Timer id="pollTimer" duration="300" repeat="true" />
+  </children>
+</component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="VideoCard" extends="Group">
+  <interface>
+    <field id="itemContent" type="node" onChange="onContent" />
+    <field id="width" type="float" onChange="onLayout" />
+    <field id="height" type="float" onChange="onLayout" />
+  </interface>
+  <script type="text/brightscript" uri="pkg:/components/VideoCard.brs" />
+  <children>
+    <Rectangle id="placeholder" color="0x272727FF" />
+    <Poster id="thumb" loadDisplayMode="scaleToZoom" />
+    <Poster id="title" />
+  </children>
+</component>
